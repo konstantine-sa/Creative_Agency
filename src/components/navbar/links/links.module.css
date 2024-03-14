@@ -1,0 +1,48 @@
+.links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logoutButton {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mobileMenuButton,
+.mobileLinks {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobileLinks {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    padding-top: 30px;
+    width: 50%;
+    height: calc(100vh - 80px);
+    background-color: navy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 640px) {
+}
